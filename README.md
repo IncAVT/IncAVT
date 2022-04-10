@@ -20,35 +20,6 @@ The code consists of
     * glist.cpp: including the used data stucture for k-core maintenance and functions for k-core computation 
 
 
-## **Data File Format** ##
-
-The code assumes the input graph is undirected and simple. In gadget/gadget.h, two functions are provided to read temporal graphs and ordinary graphs, respectively.
-
-* For temporal graphs, the file format is as follows:
-
-        n  m
-
-        u_1 v_1 t_1
-
-        u_2 v_2 t_2
-
-        ......
-
-        u_m v_m t_m
-
-That is, the first line of the file specifies the # of vertices (n) and the # of edges (m) in the graph. The following m lines are of the format "u v t", where (u, v) is an edge and "t" is the timestamp. It is required that **t_1 <= t_2 <= ... <= t_m**.
-
-* For ordinary graphs, the file format is same as that of temporal graphs except that no timestamp is required.
-        n  m
-
-        u_1 v_1 
-
-        u_2 v_2 
-
-        ......
-
-        u_m v_m 
-
 ## **Command** ##
 
 There are five options to run the code.
@@ -64,11 +35,11 @@ There are five options to run the code.
 ```
 * **-F**: the graph file name
 * **-K**: the core number 
-* -R: the edge remove directory,remember that the graph file name and the file name in this directory should follow the format: graph name_t.txt 
-* -I: the edge insert directory,remember that the graph file name and the file name in this directory should follow the format: graph name_t.txt 
+* **-R**: the edge remove directory,remember that the graph file name and the file name in this directory should follow the format: graph_name_t.txt 
+* **-I**: the edge insert directory,remember that the graph file name and the file name in this directory should follow the format: graph_name_t.txt 
 
 
-**An example command**: ./incavt -p dataset/email-Enron/Email_graph.txt -R dataset/email-Enron/Email_edge_remove/ -I dataset/email-Enron/Email_edge_insert/ -A 1  -F Email_graph -T 4 -K 5
+**An example command**: ./incavt -p dataset/Email/Email_graph.txt -R dataset/Email/Email_edge_remove/ -I dataset/Email/Email_edge_insert/ -A 2 -F Email_graph -T 4 -K 5
 
 ## **Compiling the Code** ##
 
