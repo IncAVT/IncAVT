@@ -39,7 +39,7 @@ There are five options to run the code.
 * **-I**: the edge insert directory,remember that the graph file name and the file name in this directory should follow the format: graph_name_t.txt 
 
 
-**An example command**: ./incavt -p dataset/Email/Email_graph.txt -R dataset/Email/Email_edge_remove/ -I dataset/Email/Email_edge_insert/ -A 2 -F Email_graph -T 4 -K 5
+**An example command**: ./incavt -p dataset/(dataset_name)/(dataset_name)_graph.txt -R dataset/(dataset_name)/(dataset_name)_edge_remove/ -I (dataset_name)/Email/(dataset_name)_edge_insert/ -A 2 -F (dataset_name)_graph -T 4 -K 5
 
 ## **Compiling the Code** ##
 
